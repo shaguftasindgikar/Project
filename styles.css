@@ -1,0 +1,98 @@
+
+
+/* Position the navbar container inside the image */
+.image-container {
+  position: absolute;
+  margin: 20px;
+  padding:0px;
+  width: 100%;
+
+}
+.body div img{
+  text-align: left;
+  
+}
+.top-header  h1{
+color: brown;
+}
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: brown;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  height: 10px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+   /* Header styles */
+    .header h1 {
+      margin: 20;
+      font-family: cursive;
+      text-align: center;
+      font-size: large;
+      background-color: rgb(183, 97, 97);
+    }
+
+    /* Hero section styles */
+    .hero {
+      padding: 50px ;
+      text-align: right;
+
+    }
+    .section-bg {
+      text-align: center;
+      padding: 0px;
+      margin-top: 0;
+      height: 0%;
+      font-family: cursive;
+      font-size: larger;
+    }
+    .section-bg a{
+      color: black;
+    }
+
+    .hero h2 {
+      color: #000;
+      margin: 0px;
+      padding: 0px;
+      font-family: cursive;
+      font-size: 35px;
+    }
+
+    .hero p {
+      color: #000;
+      font-family: cursive;
+      font-size: 30px;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+    }
+    .top-header h1 {
+      margin: 0; /* Removed default margin */
+      font-size: 36px; /* Increased font size for "Creamy Heaven" */
+      font-weight: bold; /* Added bold font weight */
+      font-family: cursive; /* Added cursive font family */
+      text-align: center; /* Center the text */
+      flex: 1; /* Allow the text to take up available space */
+    }
+    .top-header img{
+      height: 100px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+     /* background-color: #333; /* Add your desired background color here */
+      /*color: black; /* Set text color to contrast with the background */
+    }

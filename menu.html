@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Cake Shop</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('images/backgroungImages.jpg');
+      /* Replace 'background.jpg' with the path to your background image */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .header {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .container {
+      width: 450px;
+      margin: 0 auto;
+      padding: 10px;
+      overflow: hidden;
+      
+    }
+
+    .cake-item {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.9);
+
+    }
+
+    .cake-image {
+      width: 50%;
+      height:50%;
+      border-radius: 5px;
+    }
+
+    .cake-details {
+      padding: 2px;
+    }
+
+    .cake-name {
+      font-weight: bold;
+      margin: 0px;
+      padding-bottom: 0px;
+    }
+
+    .cake-description {
+      color: #666;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .cake-price {
+      font-size: 1.2em;
+      color: #ff6f61;
+      margin-top: 5px;
+    }
+
+    .btn-order {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-order:hover {
+      background-color: #d9362b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Our Delicious Cakes</h1>
+  </div>
+  <div class="container">
+    <div class="cake-item">
+      <img class="cake-image" src="images/cake12.jpg" alt="chocolate cake">
+      <div class="cake-details">
+        <h2 class="cake-name">Chocolate Cake</h2>
+        <p class="cake-description">Rich chocolate cake layered with smooth chocolate ganache.</p>
+        <p class="cake-price">&#8377;1000.00</p>
+        <button class="btn-order" onclick="orderCake('Chocolate Cake', 20.00)">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cake-item">
+      <img class="cake-image" src="images/cake2.jpg" alt="red velvet">
+      <div class="cake-details">
+        <h2 class="cake-name">Red Velvet Cake</h2>
+        <p class="cake-description">Classic red velvet cake with cream cheese frosting.</p>
+        <p class="cake-price">&#8377;1400.00</p>
+        <button class="btn-order" onclick="orderCake('Red Velvet Cake', 25.00)">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cake-item">
+      <img class="cake-image" src="images/cake13.jpg" alt="oreo">
+      <div class="cake-details">
+        <h2 class="cake-name">Oreo Cake</h2>
+        <p class="cake-description">oreo cake is chock full of Creamy.</p>
+        <p class="cake-price">&#8377;850.00</p>
+        <button class="btn-order" onclick="orderCake('oreo Cake', 25.00)">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cake-item">
+      <img class="cake-image" src="images/cake15.jpg" alt="Nutella cake">
+      <div class="cake-details">
+        <h2 class="cake-name">Nutella Cake</h2>
+        <p class="cake-description">Nutella cake is incredible combination of <br>
+          deliciously moist chocolate cake and luscious.</p>
+        <p class="cake-price">&#8377;1300.00</p>
+        <button class="btn-order" onclick="orderCake('Nutella cake', 25.00)">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cake-item">
+      <img class="cake-image" src="images/cake17.jpg" alt="chocolate strawberry cake">
+      <div class="cake-details">
+        <h2 class="cake-name">chocolate strawberry Cake</h2>
+        <p class="cake-description">the easiest two layered chocolate strawberry cake<br>
+          topped with chocolate ganache and fresh strawberry.</p>
+        <p class="cake-price">&#8377;1200.00</p>
+        <button class="btn-order" onclick="orderCake('chocolate strawberry Cake', 25.00)">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cake-item">
+      <img class="cake-image" src="images/cake16.jpg" alt="black forest">
+      <div class="cake-details">
+        <h2 class="cake-name">black forest Cake</h2>
+        <p class="cake-description">this deliciously moist black forest cake is<br>
+          a cut above the rest with homemade whipped cream.</p>
+        <p class="cake-price">&#8377;800.00</p>
+        <button class="btn-order" onclick="orderCake('black forest Cake', 25.00)">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cake-item">
+      <img class="cake-image" src="images/cake14.jpg" alt="Creamy butterscotch cake">
+      <div class="cake-details">
+        <h2 class="cake-name">Creamy butter scotch Cake</h2>
+        <p class="cake-description">what a slice of Heaven tastes like.</p>
+        <p class="cake-price">&#8377;1000.00</p>
+        <button class="btn-order" onclick="orderCake('Creamy butterscotch Cake', 25.00)">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <!-- Add more cake items as needed -->
+  </div>
+
+  <script>
+    function orderCake(name, price) {
+      alert('You ordered ' + name + ' for $' + price);
+      // Here you can add code to handle the order, like sending it to a server
+    }
+  </script>
+</body>
+
+</html>

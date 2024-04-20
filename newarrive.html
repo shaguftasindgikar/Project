@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Arrivals - Creamy Heaven</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <!-- Your header content -->
+</header>
+
+<div class="container">
+  <h1>New Arrivals</h1>
+  <div id="newArrivals" class="product-container">
+    <!-- Product cards will be dynamically added here -->
+  </div>
+</div>
+
+<footer>
+  <!-- Your footer content -->
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+    /* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(237, 180, 123);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+}
+
+.product-card h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.product-card p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+</style>
+<script>
+    window.onload = function() {
+  // Sample product data (replace with your actual product data)
+  const products = [
+    { name: 'Cake 1', image: 'images/cake1.jpg', description: 'cute children cake top with beatiful rose pattels.' },
+    { name: 'Cake 2', image: 'images/cake2.jpg', description: 'the perfect food best desert in the word<br>a celebration of life.' },
+    { name: 'Cake 3', image: 'images/cake3.jpg', description: 'chocolate truffle cake granished with juicy berries.' }
+
+    // Add more product objects as needed
+  ];
+
+  const newArrivalsContainer = document.getElementById('newArrivals');
+
+  // Loop through products and create product cards
+  products.forEach(product => {
+    const productCard = document.createElement('div');
+    productCard.classList.add('product-card');
+    productCard.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h2>${product.name}</h2>
+      <p>${product.description}</p>
+    `;
+    newArrivalsContainer.appendChild(productCard);
+  });
+}
+
+</script>
